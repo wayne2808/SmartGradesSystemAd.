@@ -1,0 +1,123 @@
+
+@media (max-width: 500px) {
+body {
+    background-image: url("pics/Background.jpg");
+    margin: 0;
+    font-family: "Times New Roman", sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }      
+        }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.397);
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .header h3 {
+      background-color: rgb(224, 16, 16);
+      padding: 10px 20px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .header h1 {
+      margin: 0;
+      color: #800000;
+      font-weight: 700;
+      font-size: 27px;
+    }
+
+    .subtext {
+      color: #800000;
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    .login-box {
+      background-color: rgba(255, 255, 255, 0.39);
+      border: none;
+      border-radius: 12px;
+      padding: 30px 40px;
+      width: 350px;
+      text-align: left;
+      margin: 100px auto;
+      box-shadow: #000000 0px 10px 25px;
+      transition: transform 0.3s ease;
+    }
+    .logo {
+      position: absolute; 
+      top: 75px; 
+      left: 50%; 
+      transform: translateX(-50%);
+      width: 200px; 
+      height: auto;
+    }
+
+    label {
+      font-weight: bold;
+      color: #800000;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 95%;
+      padding: 8px;
+      margin: 8px 0 15px 0;
+      border: 1px solid #800000;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    input:focus {
+      box-shadow: 0 0 5px #800000;
+    }
+
+    .login-btn {
+      background-color: #800000;
+      color: white;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 5px;
+      width: 100%;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    .links {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    .links a {
+      color: #800000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    

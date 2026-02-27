@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome Animation</title>
+  <link rel="stylesheet" href=".css">
+</head>
+<body>
+
+
+<table id="gradeTable">
+  <tr>
+    <th>NAME</th>
+    <th>GEN. AVE</th>
+    <th>ACADEMIC AWARD</th>
+  </tr>
+
+  <tr>
+    <td class="names">ARBASTO, RHAINE DHANIELLE R.</td>
+    <td>
+      <input type="number" step="0.01" oninput="computeRow(this)">
+    </td>
+    <td class="honor"></td>
+  </tr>
+
+</table>
+<script>
+function computeRow(input){
+
+  // get the row of the input
+  const row = input.parentElement.parentElement;
+
+  // get the value of the input
+  const value = parseFloat(input.value);
+
+  const honorCell = row.querySelector(".honor");
+
+  if(!isNaN(value)){
+
+    if(value >= 97.5){
+      honorCell.textContent = "With Highest Honor";
+    }
+    else if(value >= 94.5){
+      honorCell.textContent = "With High Honor";
+    }
+    else if(value >= 89.5){
+      honorCell.textContent = "With Honor";
+    }
+    else{
+      honorCell.textContent = "No Honors";
+    }
+
+  } else {
+    honorCell.textContent = "";
+  }
+}
+</script>
+</body>
+</html>

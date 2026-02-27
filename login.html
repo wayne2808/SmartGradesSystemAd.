@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartGrade System - Login</title>
+  <link rel="stylesheet" href="log.css">  
+  <script src="main.js"></script>
+  <style>
+  </style>
+</head>
+<body>
+    <style>
+        body {
+            font-family: 'Times New Roman', sans-serif;
+            background-color: #9c0000;
+            background-image: url("Background.jpg");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+
+</body>
+    <div class="login-box">
+       <div class="logo"></div>
+      
+        <h2 style="text-align: center; color: #800000; margin-bottom: 20px;">Philippine Women's University</h2>
+        <h4 style="text-align: center; color: #800000; margin-bottom: 20px;">SmartGrade System</h4>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required />
+
+        <button onclick="login()" class="login-btn">Login</button>
+
+
+<p id="message"></p>
+
+        <div class="links">
+          <p><a href="#">Forgot password?</a></p>
+          <p>If you don’t have an account <a href="#">Register</a></p>
+          
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+  if (!localStorage.getItem("accounts")) {
+  const demoAccounts = [
+    { email: "admin@gmail.com", password: "password" },
+  ];
+  localStorage.setItem("accounts", JSON.stringify(demoAccounts));
+}
+function login() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const accounts = JSON.parse(localStorage.getItem("accounts"));
+
+  const user = accounts.find(
+    acc => acc.email === email && acc.password === password
+  );
+
+  if (user) {
+    localStorage.setItem("loggedInUser", email);
+
+    window.location.href = "index.html";
+  } else {
+    alert("Invalid email or password");
+  }
+}
+</Script>
+</body>
+</html>

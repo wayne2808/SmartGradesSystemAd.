@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+      
+<div class="welcome-screen" id="welcome">
+    <div class="welcome-box">
+      <img src="pics/PWU LOGO.png" alt="Logo" class="welcome-logo">
+      <h1 class="welcome-text">Welcome to SmartGrade System</h1>
+      <p class="welcome-subtext">Note: This website is for educational purposes only, all the data that included in this website is given by the researchers and not from the teachers</p>
+    </div>
+  </div>
+
+
+          <nav class="navbar">
+            <a href="#" class="logo"></a>
+            <div class="nav-links">
+                <ul>
+                    <li class="box">
+                    <li><a href="sections.html">Sections</a></li>
+                    <li><a href="subjects.html">Subjects</a></li>
+                    <li><a href="academicaward.html">Academic Award</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                    </li>
+                </ul>
+            </div>
+            <img src="pics/hamburger.png" alt=" Menu" class="menu-icon">
+        </nav>
+    
+    <header></header>
+
+        <div class="upper-box"></div>
+            <div></div>
+<div class="top-container">
+  <div class="top">
+    <div class="logo">
+      <img src="pics/PWU LOGO.png" alt="PWU Logo">
+      <div class="logo-text">
+        Philippine Women’s University<br>
+        <small>SmartGrade System</small>
+      </div>
+    </div>
+
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Times New Roman', Times, serif
+}
+
+.welcome-screen {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center,#d8c8c8,  #9e0000f3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 5s ease forwards;
+  animation-delay: 3s;
+}
+.welcome-box {
+  text-align: center;
+}
+.welcome-logo {
+  width: 100px;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: scaleIn 1.5s ease forwards;
+}
+
+.welcome-text {
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: scaleIn 3s ease forwards;
+  animation-delay: 0.2s;
+}
+
+
+.welcome-subtext {
+  color: #e0e7ff;
+  font-size: 0.6rem;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  opacity: 0;
+  text-align: center;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.8s;
+}
+@keyframes scaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+</style>
+<script>
+const welcome = document.getElementById("welcome");
+
+setTimeout(() => {
+  welcome.style.display = "none";
+}, 4000);
+</script>
+
+</body>
+    <script>
+         
+    </script>
+</html>
